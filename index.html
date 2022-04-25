@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>currency exchange</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/converter.css" rel="stylesheet">
+    <link href="css/currencyBox.css" rel="stylesheet">
+    <script defer src="js/script.js"></script>
+</head>
+
+<body class="body">
+    <form class="converter js-form">
+        <fieldset class="converter__fieldset">
+            <legend class="converter__title">Przelicznik prosty przelicznik walut</legend>
+            <p>
+                <label>
+                    Wybierz walutę:
+                    <select class="js-currency" name="currency">
+                        <option value="USD">USD</option>
+                        <option value="GBP" selected>GBP</option>
+                        <option value="EUR">EUR</option>
+                    </select>
+                </label>
+            </p>
+
+            <p>
+                <label>
+                    wpisz kwotę w zł: <input class="js-amountPln" type="number" value="0.00" name="amountPLN" min="0.00"
+                        step="0.01">
+                </label>
+            </p>
+        </fieldset>
+        <p class="converter__buttonContainer">
+            <button >Przelicz</button>
+            <button  type="reset">Wyczyść</button>
+        </p>
+        <p>Otrzymana wartość: <strong class="js-result"></strong></p>
+    </form>
+
+    <div class="currencyBox">
+        <p class="currencyBox__rate">kurs dolara:4,3063</p>
+        <p class="currencyBox__rate">kurs funta:5,6041</p>
+        <p class="currencyBox__rate">kurs euro: 4,6768</p>
+    </div> *kurs walut na dzień 12.04.2022
+
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+
+html {
+    box-sizing: border-box;
+}
+
+
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+.body {
+    padding: 50px 25px;
+    max-width: 900px;
+    margin: auto;
+}
+
+
+
