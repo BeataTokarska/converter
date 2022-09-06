@@ -33,10 +33,13 @@
         updateResultText(amountPln, result, currency);
     };
 
-    const init = () => {
+const init = () => {
         const formElement = document.querySelector(".js-form");
+        const resultElement = document.querySelector(".js-result");
 
-        formElement.addEventListener("submit", onFormSubmit);
+        formElement.addEventListener("submit", (event) => {
+            onFormSubmit(event, resultElement);
+        });
 
         formElement.addEventListener("reset", (event) => {
             resultElement.innerText = `N/A`;
